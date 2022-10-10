@@ -8,21 +8,21 @@ downloadBtn.addEventListener("click", e => {
 });
 
 async function fetchFile(url) {
-  const res = await fetch(url);
-const file = await res.blob();
-let tempUrl = URL.createObjectURL(file);
-        const aTag = document.createElement("a");
-        aTag.href = tempUrl;
-        aTag.download = url.replace(/^.*[\\\/]/, '');
-        document.body.appendChild(aTag);
-        aTag.click();
+
+try {
+    const res = await fetch(url);
+    const file = await res.blob();
+    let tempUrl = URL.createObjectURL(file);
+    const aTag = document.createElement("a");
+    aTag.href = tempUrl;
+    aTag.download = url.replace(/^.*[\\\/]/, '');
+    document.body.appendChild(aTag);
+    aTag.click();
+    downloadBtn.innerText = "Download File";
+    URL.revokeObjectURL(tempUrl);
+    aTag.remove();
+} catch (error) {
+    alert("Failed to download file!");
         downloadBtn.innerText = "Download File";
-        URL.revokeObjectURL(tempUrl);
-        aTag.remove();
-    // .then(res => res.blob()).then(file => {
-        
-    // }).catch(() => {
-    //     alert("Failed to download file!");
-    //     downloadBtn.innerText = "Download File";
-    // });
+}
 }
