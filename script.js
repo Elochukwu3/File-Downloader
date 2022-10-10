@@ -1,6 +1,21 @@
+
+const continer = document.getElementById('container')
+const display = `
+ <div class="wrapper">
+<header>
+  <h1>File Downloader</h1>
+  <p>Paste url of image, video, or pdf to download. This tool is made with vanilla javascript.</p>
+</header>
+<form action="/">
+  <input type="url" placeholder="Paste file url" required>
+  <button>Download File</button>
+</form>
+</div>
+`
+continer.innerHTML = display;
+
 const fileInput = document.querySelector("input"),
 downloadBtn = document.querySelector("button");
-
 downloadBtn.addEventListener("click", e => {
     e.preventDefault();
     downloadBtn.innerText = "Downloading file...";

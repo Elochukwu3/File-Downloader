@@ -6,13 +6,13 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
+#container{
   display: flex;
   padding: 0 10px;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #4285F4;
+  background:  red;
 }
 .wrapper{
   max-width: 500px;
@@ -61,7 +61,7 @@ form button{
   padding: 15px 0;
   border-radius: 5px;
   pointer-events: none;
-  background: #4285F4;
+  background: red;
   transition: opacity 0.15s ease;
 }
 form input:valid ~ button{
