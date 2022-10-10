@@ -13,9 +13,12 @@ try {
     const res = await fetch(url);
     const file = await res.blob();
     let tempUrl = URL.createObjectURL(file);
+  
     const aTag = document.createElement("a");
     aTag.href = tempUrl;
+    console.log(url);
     aTag.download = url.replace(/^.*[\\\/]/, '');
+    console.log(aTag.download);
     document.body.appendChild(aTag);
     aTag.click();
     downloadBtn.innerText = "Download File";
