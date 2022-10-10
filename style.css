@@ -17,7 +17,6 @@
 .wrapper{
   max-width: 500px;
   background: #fff;
-  border-radius: 7px;
   padding: 20px 25px 15px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
@@ -43,9 +42,7 @@ form input{
   border: 1px solid #b3b2b2;
   transition: 0.1s ease;
 }
-form input::placeholder{
-  color: #b3b2b2;
-}
+
 form input:focus{
   box-shadow: 0 3px 6px rgba(0,0,0,0.13);
 }
