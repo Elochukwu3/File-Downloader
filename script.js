@@ -13,7 +13,14 @@ const display = `
   </p>
 </header>
 <form action="/">
-  <input type="url" placeholder="Paste file url" required>
+  <input type="url" placeholder="Paste file url" required style="width: 100%;
+  height: 60px;
+  outline: none;
+  padding: 0 17px;
+  font-size: 19px;
+  border-radius: 5px;
+  border: 1px solid #b3b2b2;
+  transition: 0.1s ease;">
   <button>Download File</button>
 </form>
 </div>
