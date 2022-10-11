@@ -16,13 +16,13 @@
 }
 
 form{
-  margin: 20px 0 27px;
+  margin: 20px 0 27px !important;
 }
 
 form input:focus{
-  box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.13) !important;
 }
 form input:valid ~ button{
-  opacity: 1;
-  pointer-events: auto;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
