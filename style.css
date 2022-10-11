@@ -14,12 +14,6 @@
   min-height: 100vh;
   background:  rgb(213, 110, 100);
 }
-.wrapper{
-  max-width: 500px;
-  background: #fff;
-  padding: 20px 25px 15px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-}
 
 form{
   margin: 20px 0 27px;

@@ -1,6 +1,10 @@
 const continer = document.getElementById("container");
 const display = `
- <div class="wrapper">
+ <div class="wrapper" style=" 
+ max-width: 500px;
+ background: #fff;
+ padding: 20px 25px 15px;
+ box-shadow: 0 15px 40px rgba(0,0,0,0.12);">
 <header>
   <h1 style =" font-size: 27px;
   font-weight: 500;">
