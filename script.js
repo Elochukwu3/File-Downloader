@@ -1,5 +1,4 @@
-
-const continer = document.getElementById('container')
+const continer = document.getElementById("container");
 const display = `
  <div class="wrapper">
 <header>
@@ -11,35 +10,34 @@ const display = `
   <button>Download File</button>
 </form>
 </div>
-`
+`;
 continer.innerHTML = display;
 
 const fileInput = document.querySelector("input"),
-downloadBtn = document.querySelector("button");
-downloadBtn.addEventListener("click", e => {
-    e.preventDefault();
-    downloadBtn.innerText = "Downloading file...";
-    fetchFile(fileInput.value);
+  downloadBtn = document.querySelector("button");
+downloadBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  downloadBtn.innerText = "Downloading file...";
+  fetchFile(fileInput.value);
 });
 
 async function fetchFile(url) {
-
-try {
+  try {
     const res = await fetch(url);
     const file = await res.blob();
     let tempUrl = URL.createObjectURL(file);
-  
+
     const aTag = document.createElement("a");
     aTag.href = tempUrl;
-    aTag.download = url.replace(/^.*[\\\/]/, '');
+    aTag.download = url.replace(/^.*[\\\/]/, "");
     console.log(aTag.download);
     document.body.appendChild(aTag);
     aTag.click();
     downloadBtn.innerText = "Download File";
     URL.revokeObjectURL(tempUrl);
     aTag.remove();
-} catch (error) {
+  } catch (error) {
     alert("Failed to download file!");
-        downloadBtn.innerText = "Download File";
-}
+    downloadBtn.innerText = "Download File";
+  }
 }
