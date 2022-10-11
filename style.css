@@ -20,15 +20,7 @@
   padding: 20px 25px 15px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
-header h1{
-  font-size: 27px;
-  font-weight: 500;
-}
-header p{
-  margin-top: 5px;
-  font-size: 18px;
-  color: #474747;
-}
+
 form{
   margin: 20px 0 27px;
 }

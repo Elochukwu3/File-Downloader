@@ -2,8 +2,15 @@ const continer = document.getElementById("container");
 const display = `
  <div class="wrapper">
 <header>
-  <h1>File Downloader</h1>
-  <p>Paste url of image, video, or pdf to download. This tool is made with vanilla javascript.</p>
+  <h1 style =" font-size: 27px;
+  font-weight: 500;">
+  File Downloader
+  </h1>
+  <p style="margin-top: 5px;
+  font-size: 18px;
+  color: #474747;">
+  Paste url of image, video, or pdf to download. This tool is made with vanilla javascript.
+  </p>
 </header>
 <form action="/">
   <input type="url" placeholder="Paste file url" required>
