@@ -21,7 +21,19 @@ const display = `
   border-radius: 5px;
   border: 1px solid #b3b2b2;
   transition: 0.1s ease;">
-  <button>Download File</button>
+  <button style=" width: 100%;
+  border: none;
+  opacity: 0.7;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 20px;
+  padding: 15px 0;
+  border-radius: 5px;
+  pointer-events: none;
+  background: red;
+  transition: opacity 0.15s ease;">Download File</button>
 </form>
 </div>
 `;
